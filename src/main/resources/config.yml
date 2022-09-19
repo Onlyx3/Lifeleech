@@ -1,0 +1,20 @@
+# Terminology: 1 Heart equals 2 health or hp
+#
+#
+#
+Life:
+  # Number of Max Health a player loses on death
+  lossOnDeath: 2
+  # Settings for the Heart Container
+  # heartHealthValue is the amount of max health the consumption of a heart grants
+  # healthCap is the amount of health a player needs to have for the plugin to cancel
+  # the consumption of further hearts
+  heartHealthValue: 2
+  healthCap: 40
+  # Settings for the Bandage Item
+  # bandageCooldown is the cooldown in seconds between uses
+  # bandageDuration is the duration in Ticks for the regeneration
+  # bandageRegeneration is the Stage of the Regeneration Effect granted (0 = Regeneration 1)
+  bandageCooldown: 20
+  bandageDuration: 100
+  bandageRegeneration: 1

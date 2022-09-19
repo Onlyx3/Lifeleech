@@ -1,0 +1,5 @@
+name: Lifeleech
+version: '${version}' # Note to me: build.gradle
+main: me.only.lifeleech.Main
+api-version: 1.19
+description: A persistent gamemode revolving around increasing difficulty and stealing other players max hp.
