@@ -3,8 +3,11 @@
 #
 #
 Life:
-  # Number of Max Health a player loses on death
+  # lossOnDeath is Number of Max Health a player loses on death
+  # minHealth is the amount of max health at which a player won't lose hp on death
+  # (and also drop no container)
   lossOnDeath: 2
+  minHealth: 2
   # Settings for the Heart Container
   # heartHealthValue is the amount of max health the consumption of a heart grants
   # healthCap is the amount of health a player needs to have for the plugin to cancel

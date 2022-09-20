@@ -54,6 +54,7 @@ public final class Main extends JavaPlugin {
     private void loadConfig() {
         //Listener Options
         DeathHealthListener.setHealthLoss(config.getInt("Life.lossOnDeath", 2));
+        DeathHealthListener.setMinHealth(config.getInt("Life.minHealth", 2));
 
         //Item Options
         HeartContainer.setHealthCap(config.getInt("Life.healthCap", 40));
