@@ -17,7 +17,7 @@ import java.util.Map;
 
 public final class Main extends JavaPlugin {
 
-    FileConfiguration config;
+    ConfigHelper mainConfig;
     private static Main instance;
 
     public static NamespacedKey itemIdentity;
@@ -28,10 +28,7 @@ public final class Main extends JavaPlugin {
 
         instance = this;
 
-        //Config stuff
-        config = this.getConfig();
-        loadConfig();
-        saveDefaultConfig();
+        setupConfigs();
 
         itemIdentity = new NamespacedKey(this, "itemIdentity");
         itemIdentity = new NamespacedKey(this, "craftingIdentity");
@@ -51,7 +48,14 @@ public final class Main extends JavaPlugin {
 
     }
 
+    private void setupConfigs() {
+        mainConfig = new ConfigHelper("config.yml", this);
+        mainConfig.saveDefaultConfig();
+    }
     private void loadConfig() {
+        //Configs
+        FileConfiguration config = mainConfig.getConfig();
+
         //Listener Options
         DeathHealthListener.setHealthLoss(config.getInt("Life.lossOnDeath", 2));
         DeathHealthListener.setMinHealth(config.getInt("Life.minHealth", 2));
